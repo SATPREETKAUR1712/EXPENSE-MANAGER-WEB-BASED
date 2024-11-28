@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Manager</h1>
+
+        <!-- Button to load expenses -->
+        <button onclick="loadExpenses()">Load Expenses</button>
+
+        <!-- Add Expense Form -->
+        <h3>Add Expense</h3>
+        <form id="add-expense-form" onsubmit="addExpense(event)">
+            <input type="number" id="add-amount" placeholder="Amount" required>
+            <input type="text" id="add-category" placeholder="Category" required>
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- Edit Expense Form -->
+        <h3>Edit Expense</h3>
+        <form id="edit-expense-form" onsubmit="editExpense(event)">
+            <input type="number" id="edit-id" placeholder="Expense ID" required>
+            <input type="number" id="edit-amount" placeholder="New Amount" required>
+            <input type="text" id="edit-category" placeholder="New Category" required>
+            <button type="submit">Edit Expense</button>
+        </form>
+
+        <!-- Div to show the list of expenses -->
+        <div id="expenses-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
